@@ -139,27 +139,8 @@
 	<script type='text/javascript' src='index.js'></script>
 	<script type='text/javascript'>//<![CDATA[
 
-		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":69659824,"index.wasm":19796835},"focusCanvas":true,"gdnativeLibs":[]};
+		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":69660464,"index.wasm":25658069},"focusCanvas":true,"gdnativeLibs":[]};
 		var engine = new Engine(GODOT_CONFIG);
-
-		// Virtual Keyboard Bridge
-		window.forceVirtualKeyboard = function(currentText) {
-			console.log("Godot requested virtual keyboard!");
-			var dummy = document.getElementById("dummy-input");
-			if (!dummy) {
-				dummy = document.createElement("input");
-				dummy.id = "dummy-input";
-				dummy.type = "text";
-				dummy.style.position = "absolute";
-				dummy.style.opacity = 0;
-				dummy.style.pointerEvents = "none";
-				dummy.style.zIndex = -1;
-				document.body.appendChild(dummy);
-			}
-			dummy.value = currentText;
-			dummy.focus();
-			dummy.click();
-		};
 
 		(function() {
 			const INDETERMINATE_STATUS_STEP_MS = 100;
