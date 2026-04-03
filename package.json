@@ -1,0 +1,7 @@
+{
+  "name": "wizzard-rush",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'Skipping build... static deploy'"
+  }
+}
